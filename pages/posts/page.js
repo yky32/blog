@@ -1,7 +1,7 @@
 import Format from "../../layout/format"
 import Author from '../../components/_child/author'
 import Image from "next/image"
-import Ralated from "../../components/_child/ralated"
+import Related from "../../components/_child/related"
 
 export default function page() {
   return (
@@ -35,7 +35,7 @@ export default function page() {
             </p>
           </div>
 
-          <Ralated></Ralated>
+          <Related></Related>
         </div>
       </section>
     </Format>

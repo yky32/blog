@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Author from "./author"
 
-export default function Ralated() {
+export default function Related() {
     return (
         <section className="pt-20">
              <h1 className="font-bold text-3xl py-10">Related</h1>
