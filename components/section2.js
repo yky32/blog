@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import Author from "./_child/author"
-import getPost from "../lib/helper"
+import fetcher from "../lib/fetcher"
 
 export default function section2() {
-
-	getPost(2).then(res => console.log(res))
+	const {data, isLoading, isError} = fetcher('api/posts')
+	if (data) {
+		console.log(data)
+	}
 
 	return (
 		<section className="container mx-auto md:px-20 py-10">
