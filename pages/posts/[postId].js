@@ -35,8 +35,8 @@ export default function page({ title, img, subtitle, description, author }) {
 
 
 
-export async function getStaticProps({ parms }) {
-  const posts = await getPost(parms.postId)
+export async function getStaticProps({ params }) {
+  const posts = await getPost(params.postId)
   return {
     props: posts
   }
@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 
   const paths = posts.map(value => {
     return {
-      parms: {
+      params: {
         postId: value.id.toString()
       }
     }
