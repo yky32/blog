@@ -4,13 +4,13 @@ import Image from "next/image"
 import Related from "../../components/_child/related"
 import getPost from "../../lib/helper"
 
-export default function page({title, img, subtitle, description, author }) {
+export default function page({ title, img, subtitle, description, author }) {
 
   return (
     <Format>
       <section className="container mx-auto md:px-2 py-16 w-1/2">
         <div className="flex justify-center">
-          { author? <Author></Author> : <></>}
+          {author ? <Author></Author> : <></>}
         </div>
 
         <div className="post py-10">
@@ -35,17 +35,17 @@ export default function page({title, img, subtitle, description, author }) {
 
 
 
-export async function getStaticProps({ parms }){
+export async function getStaticProps({ parms }) {
   const posts = await getPost(parms.postId)
   return {
     props: posts
   }
 }
 
-export async function getStaticPaths(){
+export async function getStaticPaths() {
   const posts = await getPost()
 
-  const paths = posts.map(value=> {
+  const paths = posts.map(value => {
     return {
       parms: {
         postId: value.id.toString()
