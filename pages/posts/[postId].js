@@ -43,7 +43,7 @@ export async function getStaticProps({ parms }){
 }
 
 export async function getStaticPaths(){
-  const posts = await getPost();
+  const posts = await getPost()
 
   const paths = posts.map(value=> {
     return {
