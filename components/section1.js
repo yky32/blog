@@ -14,9 +14,9 @@ import Error from "./_child/error"
 export default function section1() {
 
     const { data, isLoading, isError } = fetcher('api/trending')
-    
-    if(isLoading) return <Spinner></Spinner>;
-    if(isError) return <Error></Error>
+
+    if (isLoading) return <Spinner></Spinner>;
+    if (isError) return <Error></Error>
 
     SwiperCore.use([Autoplay])
 
@@ -25,32 +25,32 @@ export default function section1() {
         backgroundPosition: "right"
     }
 
-  return (
-    <section className="py-16" style={bg}>
-        <div className="container mx-auto md:px-20">
-            <h1 className="font-bold text-4xl pb-12 text-center">Trending</h1>
+    return (
+        <section className="py-16" style={bg}>
+            <div className="container mx-auto md:px-20">
+                <h1 className="font-bold text-4xl pb-12 text-center">Trending</h1>
 
-            <Swiper
-                slidesPerView={1}
+                <Swiper
+                    slidesPerView={1}
                 // loop={true}
                 // autoplay= {{
                 //     delay: 2000
                 // }}
                 >
-                {
-                    data.map((value, index) => (
-                        <SwiperSlide key={index}><Slide data={value}></Slide></SwiperSlide>
-                    ))
-                }
-            </Swiper>
+                    {
+                        data.map((value, index) => (
+                            <SwiperSlide key={index}><Slide data={value}></Slide></SwiperSlide>
+                        ))
+                    }
+                </Swiper>
 
-            
-        </div>
-    </section>
-  )
+
+            </div>
+        </section>
+    )
 }
 
-function Slide({ data }){
+function Slide({ data }) {
 
     const { id, title, category, img, published, description, author } = data;
 
@@ -70,7 +70,7 @@ function Slide({ data }){
                 <p className="text-gray-500 py-3">
                     {description || "description"}
                 </p>
-                { author ? <Author {...author}></Author> : <></>}
+                {author ? <Author {...author}></Author> : <></>}
             </div>
         </div>
     )
