@@ -52,7 +52,7 @@ export default function section1() {
 
 function Slide({ data }){
 
-    const { id, title, category, img, published, description ,author } = data;
+    const { id, title, category, img, published, description, author } = data;
 
     return (
         <div className="grid md:grid-cols-2">
@@ -70,7 +70,7 @@ function Slide({ data }){
                 <p className="text-gray-500 py-3">
                     {description || "description"}
                 </p>
-                { author ? <Author></Author> : <></>}
+                { author ? <Author {...author}></Author> : <></>}
             </div>
         </div>
     )
