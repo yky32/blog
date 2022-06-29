@@ -3,6 +3,7 @@ import Image from "next/image"
 import Author from "./author"
 import Spinner from "./spinner"
 import Error from "./error"
+import fetcher from "../../lib/fetcher"
 
 export default function Related() {
 
