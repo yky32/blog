@@ -5,7 +5,7 @@ import fetcher from '../lib/fetcher'
 import Spinner from "./_child/spinner"
 import Error from "./_child/error"
 
-export default function section4() {
+export default function twoColumns() {
 
   const { data, isLoading, isError } = fetcher('api/popular')
 

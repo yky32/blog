@@ -1,4 +1,4 @@
-import MarkdownLayout from "../../components/markdownLayout";
+import MarkdownLayout from "../../components/_child/markdownLayout";
 import {getAllDocs, getDocBySlug} from "../../lib/docs";
 import markdownToHtml from "../../lib/markdown";
 

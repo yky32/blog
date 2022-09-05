@@ -17,7 +17,7 @@ export default function MarkdownLayout({children, meta: pageMeta}) {
                 <meta content="IE=edge" httpEquiv="X-UA-Compatible"/>
                 <meta content="width=device-width, initial-scale=1" name="viewport"/>
                 <meta name="robots" content="follow, index"/>
-                <link href="/favicon.ico" rel="shortcut icon"/>
+                <link href="/public/favicon.ico" rel="shortcut icon"/>
                 <meta content={meta.description} name="description"/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:site_name" content={meta.title}/>
