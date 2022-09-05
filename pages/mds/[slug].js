@@ -18,8 +18,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }) {
     const fileName = fs.readFileSync(`mds/posts/${slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
-
-    console.log(frontmatter)
     return {
         props: {
             frontmatter: frontmatter,
