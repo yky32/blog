@@ -11,7 +11,7 @@ import Spinner from "./_child/spinner"
 import Error from "./_child/error"
 
 
-export default function section1() {
+export default function banner() {
 
     const { data, isLoading, isError } = fetcher('api/trending')
 
