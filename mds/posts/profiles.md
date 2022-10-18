@@ -38,9 +38,13 @@
         "address3": "string"
       }
     ],
-    "facilities": [ // pending from dickson ko.
-      "string"
-    ]
+    "metadata": {
+      "size": "string",
+      "openingHours": "string",
+      "facilities": [
+        "string"
+      ]
+    }
   }
 
   // reference class.
