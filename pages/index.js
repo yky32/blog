@@ -27,7 +27,6 @@ export default function Home({mds}) {
             <div>
             </div>
             <Banner></Banner>
-            <Mds mds={mds}></Mds>
             <LatestPosts></LatestPosts>
             <PopularPosts></PopularPosts>
             <TwoColumns></TwoColumns>
